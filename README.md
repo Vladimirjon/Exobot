@@ -9,4 +9,3 @@ Integrantes: - José Pallares
              - Johann Pasquel
              - Jorge Torres
              - Alexis Vasco
-

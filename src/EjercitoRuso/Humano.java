@@ -15,7 +15,8 @@ public abstract class Humano implements IHumanoExtremidad{
     
     private ArrayList<String> TJnombreHumano;
 
-    public Humano() {
+    public Humano(String tjnombre) {
+        
         TJnombreHumano = new ArrayList<>();
         Random random = new Random();
 

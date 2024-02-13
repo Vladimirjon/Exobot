@@ -56,7 +56,7 @@ public class Exobot extends IABOT implements IHumanoExtremidad {
             System.out.println("Tronco");
         
         if(Exobot.cabeza)
-            System.out.println("Czabeza");
+            System.out.println("Cabeza");
         
 
 

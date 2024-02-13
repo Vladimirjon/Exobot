@@ -14,6 +14,7 @@ public class Exobot extends IABOT implements IHumanoExtremidad {
     private Pierna epiernaIzqquierda;
 
     public Exobot(IABOT iabot) {
+        //Parte de Alex
         super(iabot);
         eturboReactor = new TurboReactor();
         ebrazoDerecho = new BrazoDerecho();

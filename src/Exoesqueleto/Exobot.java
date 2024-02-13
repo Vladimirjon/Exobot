@@ -57,9 +57,6 @@ public class Exobot extends IABOT implements IHumanoExtremidad {
         
         if(Exobot.cabeza)
             System.out.println("Cabeza");
-        
-
-
     }
 
     // // public Boolean inicializar(){

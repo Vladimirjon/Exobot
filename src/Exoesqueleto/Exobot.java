@@ -1,11 +1,13 @@
 package Exoesqueleto;
 
 import java.util.Random;
+
+import EjercitoRuso.ExpertoEspanol;
 import EjercitoRuso.IHumanoExtremidad;
 import InteligenciaArtificial.IABOT;
 
-public class Exobot extends IABOT implements IHumanoExtremidad {
-    // private Boolean inicializado;
+public class Exobot extends IABOT implements IHumanoExtremidad,ITecnicoEspanol,ITecnicoIngles {
+    private ExpertoEspanol expertoEspanol;
     private FuentePoder efuentePoder;
     private TurboReactor eturboReactor;
     private BrazoDerecho ebrazoDerecho;
@@ -45,10 +47,14 @@ public class Exobot extends IABOT implements IHumanoExtremidad {
                 System.out.println("Lanzallamas equipado ");
             }
         
-            // Luego de equipar el arma, activarla con el tiempo adecuado
             ebrazoDerecho.activarArma(5);
         }
         
+        if (Exobot.brazoDerecho)
+        System.out.println("Brazo Derecho");
+
+        if (Exobot.brazoIzquierdo)
+        System.out.println("Brazo Izquierda");
 
         if (Exobot.piernaDerecha)
             System.out.println("Pierna Derecha");
@@ -62,6 +68,10 @@ public class Exobot extends IABOT implements IHumanoExtremidad {
         if(Exobot.cabeza)
             System.out.println("Cabeza");
 
+
+
     }
+    
+    
 
 }

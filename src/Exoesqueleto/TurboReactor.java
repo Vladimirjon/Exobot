@@ -9,10 +9,6 @@ public class TurboReactor {
         this.carga = 0;
         this.vuelo = false;
     }
-    public void cargarCombustible(int cantidad){
-        carga+= cantidad;
-        System.out.println("Se ha cargado "+cantidad+"%");
-    }
     public void activarVuelo(){
         if(carga>0){
             System.out.println("El exoesqueleto puede volar");

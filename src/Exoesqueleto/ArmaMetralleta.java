@@ -1,5 +1,9 @@
 package Exoesqueleto;
 
-public class ArmaMetralleta {
+public class ArmaMetralleta extends ArmaIzquierda {
+
+    public ArmaMetralleta(String tipo) {
+        super(tipo);
+    }
 
 }

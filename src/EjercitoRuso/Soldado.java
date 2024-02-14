@@ -4,6 +4,7 @@ public class Soldado extends Humano implements IHumanoExtremidad{
     private Boolean habilidadBrazoDerecho;
 
     public Soldado(String nombre){
+        //
         super(nombre);
 
         if(Soldado.brazoDerecho)

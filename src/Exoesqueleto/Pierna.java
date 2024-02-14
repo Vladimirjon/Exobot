@@ -5,6 +5,10 @@ public class Pierna {
     private String piernaDerecha;
     private String habilidad;
     private String Pierna;
+    public Pierna(){
+        
+    }
+    
     public Pierna(String piernaIzquierda, String piernaDerecha, String habilidad){
         this.piernaIzquierda = piernaIzquierda;
         this.piernaDerecha = piernaDerecha;

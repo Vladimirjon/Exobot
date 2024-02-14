@@ -1,69 +1,67 @@
 package Exoesqueleto;
 
+import java.util.Random;
 import EjercitoRuso.IHumanoExtremidad;
 import InteligenciaArtificial.IABOT;
 
 public class Exobot extends IABOT implements IHumanoExtremidad {
-    //private Boolean inicializado;
+    // private Boolean inicializado;
     private FuentePoder efuentePoder;
     private TurboReactor eturboReactor;
     private BrazoDerecho ebrazoDerecho;
-    private BrazoIzquiedo ebrazoIzquierda;
+    private BrazoIzquierdo ebrazoIzquierdo;
     private Pierna epiernaDerecha;
     private Pierna epiernaIzqquierda;
 
-    public Exobot(IABOT iabot){
+    public Exobot(IABOT iabot) {
         super(iabot);
         eturboReactor = new TurboReactor();
         ebrazoDerecho = new BrazoDerecho();
-        ebrazoIzquierda = new BrazoIzquiedo();
+        ebrazoIzquierdo = new BrazoIzquierdo();
         epiernaDerecha = new Pierna();
         epiernaIzqquierda = new Pierna();
 
-        if(Exobot.brazoDerecho){
-            System.out.println("Brazo Derecho");
-            boolean habilidadBrazoDerecho=true;
+        if (Exobot.brazoIzquierdo) {
+            ebrazoIzquierdo = new BrazoIzquierdo();
+            boolean habilidadBrazoIzquierdo = new Random().nextBoolean();
+            System.out.println("Equipando arma en el Brazo Izquierdo...");
+            if (habilidadBrazoIzquierdo)
+                ebrazoIzquierdo.setArma(new ArmaMetralleta("Metralleta MK61 equipada "));
+            else
+                ebrazoIzquierdo.setArma(new ArmaBazuca("Bazuca antitanque equipada "));
 
-            if(habilidadBrazoDerecho){
-                ArmaLaser lz = new ArmaLaser("Metralleta MK61");
-                ebrazoIzquierda.setArma(lz);
-            }else{
-                ArmaLanzafuegos lf = new ArmaLanzafuegos("Bazuca Antitanque");
-                ebrazoIzquierda.setArma(lf);
+        }
+
+        if (Exobot.brazoDerecho) {
+            ebrazoDerecho = new BrazoDerecho();
+            boolean habilidadBrazoDerecho = new Random().nextBoolean();
+            System.out.println("Equipando arma en el Brazo Derecho...");
+        
+            if (habilidadBrazoDerecho) {
+                ebrazoDerecho.equiparArma(new ArmaLaser(10));
+                System.out.println("Arma láser equipada ");
+            } else {
+                ebrazoDerecho.equiparArma(new ArmaLanzafuegos("Lanzallamas"));
+                System.out.println("Lanzallamas equipado ");
             }
+        
+            // Luego de equipar el arma, activarla con el tiempo adecuado
+            ebrazoDerecho.activarArma(5);
         }
         
 
-        if(Exobot.brazoIzquierdo){
-            System.out.println("Brazo Izquierdo");
-            boolean habilidadBrazoIzquierdo=true;
-
-            if(habilidadBrazoIzquierdo){
-                ArmaMetralleta m = new ArmaMetralleta("Metralleta MK61");
-                ebrazoIzquierda.setArma(m);
-            }else{
-                ArmaBazuca b = new ArmaBazuca("Bazuca Antitanque");
-                ebrazoIzquierda.setArma(b);
-            }
-        }
-        if(Exobot.piernaDerecha)
+        if (Exobot.piernaDerecha)
             System.out.println("Pierna Derecha");
-        
-        if(Exobot.piernaIzquierda)
+
+        if (Exobot.piernaIzquierda)
             System.out.println("Pierna Izquierda");
-        
-        if(Exobot.tronco)
+
+        if (Exobot.tronco)
             System.out.println("Tronco");
         
         if(Exobot.cabeza)
             System.out.println("Cabeza");
-    }
 
-    // // public Boolean inicializar(){
-    //     if(!inicializado){
-    //         System.out.println("Iniciaando exobot...");
-    //     }
-    // //     return inicializado;
-    // // }
+    }
 
 }

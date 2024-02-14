@@ -18,8 +18,8 @@ public class Exobot extends IABOT implements IHumanoExtremidad {
         eturboReactor = new TurboReactor();
         ebrazoDerecho = new BrazoDerecho();
         ebrazoIzquierdo = new BrazoIzquierdo();
-        epiernaDerecha = new Pierna();
-        epiernaIzqquierda = new Pierna();
+        // epiernaDerecha = new Pierna();
+        // epiernaIzqquierda = new Pierna();
 
         if (Exobot.brazoIzquierdo) {
             ebrazoIzquierdo = new BrazoIzquierdo();

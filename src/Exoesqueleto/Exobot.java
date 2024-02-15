@@ -3,6 +3,7 @@ package Exoesqueleto;
 import java.util.Random;
 
 import EjercitoRuso.ExpertoEspanol;
+import EjercitoRuso.ExpertoIngles;
 import EjercitoRuso.IHumanoExtremidad;
 import InteligenciaArtificial.IABOT;
 
@@ -14,14 +15,24 @@ public class Exobot extends IABOT implements IHumanoExtremidad,ITecnicoEspanol,I
     private BrazoIzquierdo ebrazoIzquierdo;
     private Pierna epiernaDerecha;
     private Pierna epiernaIzqquierda;
+    private ExpertoEspanol profeEspanol;
+    private ExpertoIngles profeIngles;
 
-    public Exobot(IABOT iabot) {
+    public Exobot(IABOT iabot, ExpertoEspanol profEspanol, ExpertoIngles profIngles) {
         super(iabot);
         eturboReactor = new TurboReactor();
         ebrazoDerecho = new BrazoDerecho();
         ebrazoIzquierdo = new BrazoIzquierdo();
         epiernaDerecha = new Pierna();
         epiernaIzqquierda = new Pierna();
+
+        this.profeEspanol = profEspanol;
+        this.profeIngles = profIngles;
+        
+        System.out.println("Experto Espanol: " );
+        profeEspanol.traducirEspanolTecnico();
+        System.out.println("Experto Ingles: " );
+        profeIngles.traducirInglesTecnico();
 
         if (Exobot.brazoIzquierdo) {
             ebrazoIzquierdo = new BrazoIzquierdo();
@@ -51,22 +62,22 @@ public class Exobot extends IABOT implements IHumanoExtremidad,ITecnicoEspanol,I
         }
         
         if (Exobot.brazoDerecho)
-        System.out.println("Brazo Derecho");
+        System.out.println("Tengo Brazo Derecho");
 
         if (Exobot.brazoIzquierdo)
-        System.out.println("Brazo Izquierda");
+        System.out.println("Tengo Brazo Izquierda");
 
         if (Exobot.piernaDerecha)
-            System.out.println("Pierna Derecha");
+            System.out.println("Tengo Pierna Derecha");
 
         if (Exobot.piernaIzquierda)
-            System.out.println("Pierna Izquierda");
+            System.out.println("Tengo Pierna Izquierda");
 
         if (Exobot.tronco)
-            System.out.println("Tronco");
+            System.out.println("Tengo Tronco");
         
         if(Exobot.cabeza)
-            System.out.println("Cabeza");
+            System.out.println("Tengo Cabeza");
 
 
 

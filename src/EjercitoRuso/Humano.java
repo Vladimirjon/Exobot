@@ -17,7 +17,8 @@ public abstract class Humano implements IHumanoExtremidad{
 
     public Humano(String tjnombre) {
         
-        TJnombreHumano = new ArrayList<>();
+       TJnombreHumano = new ArrayList<>();
+       
         Random random = new Random();
 
         this.tjcabeza = true;
@@ -26,6 +27,10 @@ public abstract class Humano implements IHumanoExtremidad{
         this.tjbrazoDerecho = random.nextBoolean();
         this.tjpiernaIzquierda = random.nextBoolean();
         this.tjpiernaDerecha = random.nextBoolean();
+    }
+
+    public Humano(){
+
     }
 
     

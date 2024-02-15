@@ -9,7 +9,7 @@ import InteligenciaArtificial.IABOT;
 
 public class WhiteRun {
     public static void main(String[] args) throws Exception {
-        String redColorCode = "\u001B[31m";
+        String redColorCode = "\u001B[35m";
         String resetColorCode = "\u001B[0m";
         Soldado osoldado = new Soldado("Juan");
         IABOT iabot = IABOT.getInstance("IA-RUSA");
